@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestSuite>
+  <JsonParseCase>
+    <Input>
+      {
+      "glossary": {
+      "title": "example glossary",
+      "GlossDiv": {
+      "title": "S",
+      "GlossList": {
+      "GlossEntry": {
+      "ID": "SGML",
+      "SortAs": "SGML",
+      "GlossTerm": "Standard Generalized Markup Language",
+      "Acronym": "SGML",
+      "Abbrev": "ISO 8879:1986",
+      "GlossDef": {
+      "para": "A meta-markup language, used to create markup languages such as DocBook.",
+      "GlossSeeAlso": ["GML", "XML"]
+      },
+      "GlossSee": "markup"
+      }
+      }
+      }
+      }
+      }
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"menu": {
+      "id": "file",
+      "value": "File",
+      "popup": {
+      "menuitem": [
+      {"value": "New", "onclick": "CreateNewDoc()"},
+      {"value": "Open", "onclick": "OpenDoc()"},
+      {"value": "Close", "onclick": "CloseDoc()"}
+      ]
+      }
+      }}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"widget": {
+      "debug": "on",
+      "window": {
+      "title": "Sample Konfabulator Widget",        "name": "main_window",        "width": 500,        "height": 500
+      },    "image": {
+      "src": "Images/Sun.png",
+      "name": "sun1",        "hOffset": 250,        "vOffset": 250,        "alignment": "center"
+      },    "text": {
+      "data": "Click Here",
+      "size": 36,
+      "style": "bold",        "name": "text1",        "hOffset": 250,        "vOffset": 100,        "alignment": "center",
+      "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+      }
+      }}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"web-app": {
+      "servlet": [
+      {
+      "servlet-name": "cofaxCDS",
+      "servlet-class": "org.cofax.cds.CDSServlet",
+      "init-param": {
+      "configGlossary:installationAt": "Philadelphia, PA",
+      "configGlossary:adminEmail": "ksm@pobox.com",
+      "configGlossary:poweredBy": "Cofax",
+      "configGlossary:poweredByIcon": "/images/cofax.gif",
+      "configGlossary:staticPath": "/content/static",
+      "templateProcessorClass": "org.cofax.WysiwygTemplate",
+      "templateLoaderClass": "org.cofax.FilesTemplateLoader",
+      "templatePath": "templates",
+      "templateOverridePath": "",
+      "defaultListTemplate": "listTemplate.htm",
+      "defaultFileTemplate": "articleTemplate.htm",
+      "useJSP": false,
+      "jspListTemplate": "listTemplate.jsp",
+      "jspFileTemplate": "articleTemplate.jsp",
+      "cachePackageTagsTrack": 200,
+      "cachePackageTagsStore": 200,
+      "cachePackageTagsRefresh": 60,
+      "cacheTemplatesTrack": 100,
+      "cacheTemplatesStore": 50,
+      "cacheTemplatesRefresh": 15,
+      "cachePagesTrack": 200,
+      "cachePagesStore": 100,
+      "cachePagesRefresh": 10,
+      "cachePagesDirtyRead": 10,
+      "searchEngineListTemplate": "forSearchEnginesList.htm",
+      "searchEngineFileTemplate": "forSearchEngines.htm",
+      "searchEngineRobotsDb": "WEB-INF/robots.db",
+      "useDataStore": true,
+      "dataStoreClass": "org.cofax.SqlDataStore",
+      "redirectionClass": "org.cofax.SqlRedirection",
+      "dataStoreName": "cofax",
+      "dataStoreDriver": "com.microsoft.jdbc.sqlserver.SQLServerDriver",
+      "dataStoreUrl": "jdbc:microsoft:sqlserver://LOCALHOST:1433;DatabaseName=goon",
+      "dataStoreUser": "sa",
+      "dataStorePassword": "dataStoreTestQuery",
+      "dataStoreTestQuery": "SET NOCOUNT ON;select test='test';",
+      "dataStoreLogFile": "/usr/local/tomcat/logs/datastore.log",
+      "dataStoreInitConns": 10,
+      "dataStoreMaxConns": 100,
+      "dataStoreConnUsageLimit": 100,
+      "dataStoreLogLevel": "debug",
+      "maxUrlLength": 500}},
+      {
+      "servlet-name": "cofaxEmail",
+      "servlet-class": "org.cofax.cds.EmailServlet",
+      "init-param": {
+      "mailHost": "mail1",
+      "mailHostOverride": "mail2"}},
+      {
+      "servlet-name": "cofaxAdmin",
+      "servlet-class": "org.cofax.cds.AdminServlet"},
+
+      {
+      "servlet-name": "fileServlet",
+      "servlet-class": "org.cofax.cds.FileServlet"},
+      {
+      "servlet-name": "cofaxTools",
+      "servlet-class": "org.cofax.cms.CofaxToolsServlet",
+      "init-param": {
+      "templatePath": "toolstemplates/",
+      "log": 1,
+      "logLocation": "/usr/local/tomcat/logs/CofaxTools.log",
+      "logMaxSize": "",
+      "dataLog": 1,
+      "dataLogLocation": "/usr/local/tomcat/logs/dataLog.log",
+      "dataLogMaxSize": "",
+      "removePageCache": "/content/admin/remove?cache=pages&amp;id=",
+      "removeTemplateCache": "/content/admin/remove?cache=templates&amp;id=",
+      "fileTransferFolder": "/usr/local/tomcat/webapps/content/fileTransferFolder",
+      "lookInContext": 1,
+      "adminGroupID": 4,
+      "betaServer": true}}],
+      "servlet-mapping": {
+      "cofaxCDS": "/",
+      "cofaxEmail": "/cofaxutil/aemail/*",
+      "cofaxAdmin": "/admin/*",
+      "fileServlet": "/static/*",
+      "cofaxTools": "/tools/*"},
+
+      "taglib": {
+      "taglib-uri": "cofax.tld",
+      "taglib-location": "/WEB-INF/tlds/cofax.tld"}}}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"menu": {
+      "header": "SVG Viewer",
+      "items": [
+      {"id": "Open"},
+      {"id": "OpenNew", "label": "Open New"},
+      null,
+      {"id": "ZoomIn", "label": "Zoom In"},
+      {"id": "ZoomOut", "label": "Zoom Out"},
+      {"id": "OriginalView", "label": "Original View"},
+      null,
+      {"id": "Quality"},
+      {"id": "Pause"},
+      {"id": "Mute"},
+      null,
+      {"id": "Find", "label": "Find..."},
+      {"id": "FindAgain", "label": "Find Again"},
+      {"id": "Copy"},
+      {"id": "CopyAgain", "label": "Copy Again"},
+      {"id": "CopySVG", "label": "Copy SVG"},
+      {"id": "ViewSVG", "label": "View SVG"},
+      {"id": "ViewSource", "label": "View Source"},
+      {"id": "SaveAs", "label": "Save As"},
+      null,
+      {"id": "Help"},
+      {"id": "About", "label": "About Adobe CVG Viewer..."}
+      ]
+      }}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {
+      "id": "0001",
+      "type": "donut",
+      "name": "Cake",
+      "ppu": 0.55,
+      "batters":
+      {
+      "batter":
+      [
+      { "id": "1001", "type": "Regular" },
+      { "id": "1002", "type": "Chocolate" },
+      { "id": "1003", "type": "Blueberry" },
+      { "id": "1004", "type": "Devil's Food" }
+      ]
+      },
+      "topping":
+      [
+      { "id": "5001", "type": "None" },
+      { "id": "5002", "type": "Glazed" },
+      { "id": "5005", "type": "Sugar" },
+      { "id": "5007", "type": "Powdered Sugar" },
+      { "id": "5006", "type": "Chocolate with Sprinkles" },
+      { "id": "5003", "type": "Chocolate" },
+      { "id": "5004", "type": "Maple" }
+      ]
+      }
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {    
+        "SearchResponse": {        
+          "Version": "2.2",
+          "Query": {
+            "SearchTerms": "site:www.iwantmymvc.com twitter"
+          },
+          "Web": { 
+            "Total": 2, 
+            "Offset": 0,
+            "Results": [{
+              "Title": "Building dynamic content templates using Razor - I Want My MVC",
+              "Description": "Long description here...",
+              "Url": "http:\/\/www.iwantmymvc.com\/2011-03-20-dynamic-content-templates-using-razor", 
+              "CacheUrl": "http:\/\/cc.bingj.com\/cache.aspx?q=twitter&amp;d=4878726567300861&amp;w=4717360c,f7ae1ce",
+              "DisplayUrl": "www.iwantmymvc.com\/2011-03-20-dynamic-content-templates-using-razor",
+              "DateTime": "2011-05-19T23:58:00Z"
+            }, {
+              "Title": "Build a MVC web site HtmlHelper library and deliver it with NuGet ...",
+              "Description": "Long description here...",
+              "Url": "http:\/\/www.iwantmymvc.com\/mvc-web-site-htmlhelper-library-and-nuget",
+              "CacheUrl": "http:\/\/cc.bingj.com\/cache.aspx?q=twitter&amp;d=4587347404456266&amp;w=16e33228,94f2897a",
+              "DisplayUrl": "www.iwantmymvc.com\/mvc-web-site-htmlhelper-library-and-nuget",
+              "DateTime": "2011-05-19T20:19:00Z"
+            }]
+          }
+        }
+      }
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {
+      "firstName": "John",
+      "lastName" : "Smith",
+      "age"      : 25,
+      "address"  :
+      {
+      "streetAddress": "21 2nd Street",
+      "city"         : "New York",
+      "state"        : "NY",
+      "postalCode"   : "10021"
+      },
+      "phoneNumber":
+      [
+      {
+      "type"  : "home",
+      "number": "212 555-1234"
+      },
+      {
+      "type"  : "fax",
+      "number": "646 555-4567"
+      }
+      ]
+      }
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {
+      "name":"Product",
+      "properties":
+      {
+      "id":
+      {
+      "type":"number",
+      "description":"Product identifier",
+      "required":true
+      },
+      "name":
+      {
+      "type":"string",
+      "description":"Name of the product",
+      "required":true
+      },
+      "price":
+      {
+      "type":"number",
+      "minimum":0,
+      "required":true
+      },
+      "tags":
+      {
+      "type":"array",
+      "items":
+      {
+      "type":"string"
+      }
+      },
+      "stock":
+      {
+      "type":"object",
+      "properties":
+      {
+      "warehouse":
+      {
+      "type":"number"
+      },
+      "retail":
+      {
+      "type":"number"
+      }
+      }
+      }
+      }
+      }
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {
+      "id": 1,
+      "name": "Foo",
+      "price": 123,
+      "tags": ["Bar","Eek"],
+      "stock": { "warehouse":300, "retail":20 }
+      }
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Good Morning":"\u65E9\u6668","Very Large Value":2147483649}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Null Value":null}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Null Value":null,"Null Array": [1,2,3,null,5]}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Null Value":null,"Line 1\r\nLine2": [1,2,3,null,5]}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Null Value":null,"Some text with \"quotation\"": [1,2,3,null,5]}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Null Value":null,"A string with escaped back slash(\\)": [1,2,3,null,5]}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Nevative Value":-1}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Special string":"line 1\r\nline2\r\n\r\n\r\n"}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"Name":"Earth","Mean radius":6371,"Mass":5.9736e24}
+    </Input>
+  </JsonParseCase>
+</TestSuite>

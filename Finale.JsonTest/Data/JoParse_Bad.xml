@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestSuite>
+  <JsonParseCase>
+    <Input>
+      {"id":123
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {}{}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      []
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {user:123}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {user:123:456}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {user:123,user:456}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {id:123,value:456,}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"id":123,"value":456,}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"array":[1,2,3,]}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      "hello world"
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"key":123]
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"key":123, array:[}}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"missing colon"123}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"":123}
+    </Input>
+  </JsonParseCase>
+  <JsonParseCase>
+    <Input>
+      {"invalid value":value}
+    </Input>
+  </JsonParseCase>
+</TestSuite>

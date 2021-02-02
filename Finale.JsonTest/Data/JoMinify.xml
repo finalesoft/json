@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testsuite>
+  <JsonTestCase>
+    <Input>
+      {
+      "Image": {
+      "Width":  800,
+      "Height": 600,
+      "Title":  "View from 15th Floor",
+      "Thumbnail": {
+      "Url":    "http://www.example.com/image/481989943",
+      "Height": 125,
+      "Width":  "100"
+      },
+      "IDs": [116, 943, 234, 38793]
+      }
+      }
+    </Input>
+    <Answer>{"Image":{"Width":800,"Height":600,"Title":"View from 15th Floor","Thumbnail":{"Url":"http://www.example.com/image/481989943","Height":125,"Width":"100"},"IDs":[116,943,234,38793]}}</Answer>
+  </JsonTestCase>
+  <JsonTestCase>
+    <Input>
+      {
+        "id":"19292868552",
+        "name":"Facebook Platform",
+        "picture":"http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs451.snc4/50414_19292868552_7650_s.jpg",
+        "link":"http://www.facebook.com/platform",
+        "category":"Product/service",
+        "website":"http://developers.facebook.com",
+        "username":"platform",
+        "founded":"May 2007",
+        "company_overview":"Facebook Platform enables anyone to build social applications on Facebook and the web.",
+        "mission":"To make the web more open and social.",
+        "likes":1297755
+      }
+    </Input>
+    <Answer>{"id":"19292868552","name":"Facebook Platform","picture":"http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs451.snc4/50414_19292868552_7650_s.jpg","link":"http://www.facebook.com/platform","category":"Product/service","website":"http://developers.facebook.com","username":"platform","founded":"May 2007","company_overview":"Facebook Platform enables anyone to build social applications on Facebook and the web.","mission":"To make the web more open and social.","likes":1297755}</Answer>
+  </JsonTestCase>
+  <JsonTestCase>
+    <Input>
+      {
+      "data":[10,20,30,40,50,"60"]
+      }
+    </Input>
+    <Answer>{"data":[10,20,30,40,50,"60"]}</Answer>
+  </JsonTestCase>
+  <JsonTestCase>
+    <Input>
+      {
+      "data":[10,20,30,40,50,"60",-7]
+      }
+    </Input>
+    <Answer>{"data":[10,20,30,40,50,"60",-7]}</Answer>
+  </JsonTestCase>
+  <JsonTestCase>
+    <Input>
+      {
+      "string":"First line\r\nSecond line"
+      }
+    </Input>
+    <Answer>{"string":"First line\r\nSecond line"}</Answer>
+  </JsonTestCase>
+  <JsonTestCase>
+    <Input>
+      {"Good Morning":"\u65E9\u6668","Very Large Value":2147483649}
+    </Input>
+    <Answer>{"Good Morning":"早晨","Very Large Value":2147483649}</Answer>
+  </JsonTestCase>
+  <JsonTestCase>
+    <Input>
+      {
+        "Bool value":true
+      }
+    </Input>
+    <Answer>{"Bool value":true}</Answer>
+  </JsonTestCase>
+</testsuite>

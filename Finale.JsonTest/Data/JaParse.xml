@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestSuite>
+  <JAParseCase>
+    <Input>[1,2,3,4,5]</Input>
+  </JAParseCase>
+  <JAParseCase>
+    <Input>[1,2,3,4,5,[6,7,8,9,10]]</Input>
+  </JAParseCase>
+  <JAParseCase>
+    <Input>[null,null,null,["string1","string2","string3"],"string","string","string",null]</Input>
+  </JAParseCase>
+  <JAParseCase>
+    <Input>[]</Input>
+  </JAParseCase>
+  <JAParseCase>
+    <Input>[[],[],[]]</Input>
+  </JAParseCase>
+  <JAParseCase>
+    <Input>[[[],[],[]],"string"]</Input>
+  </JAParseCase>
+  <JAParseCase>
+    <Input>[[],{}]</Input>
+  </JAParseCase>
+  <JAParseCase>
+    <Input>[[],{},{"key0":0,"key1":{}},[]]</Input>
+  </JAParseCase>
+</TestSuite>
