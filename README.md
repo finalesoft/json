@@ -1,6 +1,6 @@
 # Finale.Json
 
-Finale.Json is a lightweight .NET library for managing JSON data.
+Finale.Json is a simple, lightweight and easy-to-use .NET library for managing JSON data.
 
 ## How to use
 A `JsonObject` or `JsonArray` can be created empty, by passing a JSON-formated string, or by passing members to the constructor directly. `JsonObject` behaves like a `Dictionary<>`, while `JsonArray` behaves like a `List<>`.
